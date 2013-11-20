@@ -14,7 +14,7 @@ last = 0
 
 last = int(last_file.read().rstrip())
 
-numWords = 0
+numWords = 1
 for line in words_file:
     words[line.rstrip()] = numWords
     numWords += 1
@@ -56,8 +56,10 @@ for submission in subreddit.get_new(limit=None):
 			else:
 				wordCounts[word] = 1
 	features = ""
-	for word, count in wordCounts.iteritems():
-		features += str(words[word]) + ":" + str(float(count)) + " "
+	def wordToI(word):
+		return words[word]
+	for wordI,count in [(words[k], wordCounts[k]) for k in sorted(wordCounts, key=wordToI)]:
+		features += str(wordI) + ":" + str(float(count)) + " "
 	results_file.write(target +  " " + features + "# " + submission.id + "\n")
 	
 words_file.close()
