@@ -1,6 +1,6 @@
 import random
 
-n_val = 900
+n_val = 0
 n_test = 100
 fTrain = open('fTrain.data', 'wb')
 fVal = open('fVal.data', 'wb')
