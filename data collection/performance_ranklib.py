@@ -22,7 +22,7 @@ if len(sys.argv) == 3:
     with open(predictfile_name, 'r') as predictfile:
         count = 0
         for line in predictfile:
-            predictratings.append((float(line),count))
+            predictratings.append((float(line.split()[2]),count))
             count += 1
 
     #Sort both rating lists
@@ -98,8 +98,9 @@ if len(sys.argv) == 3:
             top_predict.append(testratings[j][1])
             top_test.append(predictratings[j][1])
 
+
         acc = len(set(top_test).intersection(set(top_predict)))/float(i)
-        print "Better than random on top " + str(i) + " is: " + str(acc/(i/300.))
+        print "Better than random on top " + str(i) + " is: " + str(acc/(i/100.))
 
 else:
     print "improper usage"
