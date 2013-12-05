@@ -99,7 +99,7 @@ if len(sys.argv) == 3:
             top_test.append(predictratings[j][1])
 
         acc = len(set(top_test).intersection(set(top_predict)))/float(i)
-        print "Better than random on top " + str(i) + " is: " + str(acc/(i/300.))
+        print "Better than random on top " + str(i) + " is: " + str(acc/(i/100.))
 
 else:
     print "improper usage"

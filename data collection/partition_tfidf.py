@@ -2,10 +2,10 @@ import random
 
 n_val = 900
 n_test = 100
-fTrain = open('fTrain.data', 'wb')
-fVal = open('fVal.data', 'wb')
-fTest = open('fTest.data', 'wb')
-f = open('posts.data', 'rb')
+fTrain = open('fTrain.data-tf_idf', 'wb')
+fVal = open('fVal.data-tf_idf', 'wb')
+fTest = open('fTest.data-tf_idf', 'wb')
+f = open('posts.data-tf_idf', 'rb')
 
 count = 0
 for line in f:
