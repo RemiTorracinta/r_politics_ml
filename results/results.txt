@@ -1,0 +1,9 @@
+RankBoost
+Accuracy on top 25 is: 0.269230769231
+Accuracy on top 10 is: 0.0909090909091
+Accuracy on top 6 is: 0.0
+
+knn (validated k = 14):
+Accuracy on top 25 is: 0.346153846154
+Accuracy on top 10 is: 0.363636363636
+Accuracy on top 6 is: 0.166666666667
