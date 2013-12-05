@@ -34,7 +34,10 @@ if len(sys.argv) == 3:
 
     #rescale interval to remove arbitrary cutoffs
     condition = testratings[interval-1][0] == testratings[interval][0]
-    count = 1
+    if condition:
+        count = 1
+    else:
+        count = 0
     while(condition and interval+count < len(testratings)):
         condition = testratings[interval-1][0] == testratings[interval+count][0]
         if condition:
@@ -55,7 +58,10 @@ if len(sys.argv) == 3:
 
     #rescale interval_ten to remove arbitrary cutoffs
     condition = testratings[interval_ten-1][0] == testratings[interval_ten][0]
-    count = 1
+    if condition:
+        count = 1
+    else:
+        count = 0
     while(condition and interval_ten+count < len(testratings)):
         condition = testratings[interval_ten-1][0] == testratings[interval_ten+count][0]
         if condition:
@@ -74,7 +80,10 @@ if len(sys.argv) == 3:
 
     #rescale interval_five to remove arbitrary cutoffs
     condition = testratings[interval_five-1][0] == testratings[interval_five][0]
-    count = 1
+    if condition:
+        count = 1
+    else:
+        count = 0
     while(condition and interval_five+count < len(testratings)):
         condition = testratings[interval_five-1][0] == testratings[interval_five+count][0]
         if condition:
@@ -91,16 +100,16 @@ if len(sys.argv) == 3:
     print "Accuracy on top " + str(use_interval_five) + " is: " + str(len(set(top_test).intersection(set(top_predict)))/float(use_interval_five))
 
 #calculates better than random
-    for i in range(1,101):
-        top_predict = []
-        top_test = []
-        for j in range(i):
-            top_predict.append(testratings[j][1])
-            top_test.append(predictratings[j][1])
+#for i in range(1,101):
+#top_predict = []
+#top_test = []
+#for j in range(i):
+#    top_predict.append(testratings[j][1])
+#  top_test.append(predictratings[j][1])
 
 
-        acc = len(set(top_test).intersection(set(top_predict)))/float(i)
-        print "Better than random on top " + str(i) + " is: " + str(acc/(i/100.))
+#acc = len(set(top_test).intersection(set(top_predict)))/float(i)
+# print "Better than random on top " + str(i) + " is: " + str(acc/(i/100.))
 
 else:
     print "improper usage"

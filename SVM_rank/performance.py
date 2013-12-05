@@ -34,7 +34,10 @@ if len(sys.argv) == 3:
 
     #rescale interval to remove arbitrary cutoffs
     condition = testratings[interval-1][0] == testratings[interval][0]
-    count = 1
+    if condition:
+        count = 1
+    else:
+        count = 0
     while(condition and interval+count < len(testratings)):
         condition = testratings[interval-1][0] == testratings[interval+count][0]
         if condition:
@@ -55,7 +58,10 @@ if len(sys.argv) == 3:
 
     #rescale interval_ten to remove arbitrary cutoffs
     condition = testratings[interval_ten-1][0] == testratings[interval_ten][0]
-    count = 1
+    if condition:
+        count = 1
+    else:
+        count = 0
     while(condition and interval_ten+count < len(testratings)):
         condition = testratings[interval_ten-1][0] == testratings[interval_ten+count][0]
         if condition:
@@ -74,7 +80,10 @@ if len(sys.argv) == 3:
 
     #rescale interval_five to remove arbitrary cutoffs
     condition = testratings[interval_five-1][0] == testratings[interval_five][0]
-    count = 1
+    if condition:
+        count = 1
+    else:
+        count = 0
     while(condition and interval_five+count < len(testratings)):
         condition = testratings[interval_five-1][0] == testratings[interval_five+count][0]
         if condition:
