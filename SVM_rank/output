@@ -1,0 +1,92 @@
+c is  0.0001
+Accuracy on top 25 is: 0.44
+Accuracy on top 10 is: 0.3
+Accuracy on top 5 is: 0.2
+c is  0.0005
+Accuracy on top 25 is: 0.44
+Accuracy on top 10 is: 0.4
+Accuracy on top 5 is: 0.2
+c is  0.001
+Accuracy on top 25 is: 0.44
+Accuracy on top 10 is: 0.5
+Accuracy on top 5 is: 0.4
+c is  0.005
+Accuracy on top 25 is: 0.44
+Accuracy on top 10 is: 0.3
+Accuracy on top 5 is: 0.4
+c is  0.01
+Accuracy on top 25 is: 0.44
+Accuracy on top 10 is: 0.3
+Accuracy on top 5 is: 0.4
+c is  0.05
+Accuracy on top 25 is: 0.48
+Accuracy on top 10 is: 0.3
+Accuracy on top 5 is: 0.4
+c is  0.1
+Accuracy on top 25 is: 0.48
+Accuracy on top 10 is: 0.3
+Accuracy on top 5 is: 0.4
+
+
+tfidf
+
+c is  0.0001
+Accuracy on top 25 is: 0.56
+Accuracy on top 10 is: 0.5
+Accuracy on top 5 is: 0.6
+c is  0.0005
+Accuracy on top 25 is: 0.56
+Accuracy on top 10 is: 0.5
+Accuracy on top 5 is: 0.6
+c is  0.001
+Accuracy on top 25 is: 0.56
+Accuracy on top 10 is: 0.5
+Accuracy on top 5 is: 0.6
+c is  0.005
+Accuracy on top 25 is: 0.56
+Accuracy on top 10 is: 0.5
+Accuracy on top 5 is: 0.6
+c is  0.01
+Accuracy on top 25 is: 0.56
+Accuracy on top 10 is: 0.6
+Accuracy on top 5 is: 0.6
+c is  0.05
+Accuracy on top 25 is: 0.52
+Accuracy on top 10 is: 0.6
+Accuracy on top 5 is: 0.4
+c is  0.1
+Accuracy on top 25 is: 0.52
+Accuracy on top 10 is: 0.6
+Accuracy on top 5 is: 0.4
+
+
+0.0
+0.0
+0.333333333333
+0.5
+0.4
+0.333333333333
+0.285714285714
+0.375
+0.333333333333
+0.3
+0.363636363636
+0.333333333333
+0.384615384615
+0.357142857143
+0.4
+0.4375
+0.470588235294
+0.444444444444
+0.421052631579
+0.45
+0.428571428571
+0.454545454545
+0.434782608696
+0.458333333333
+0.48
+0.5
+0.481481481481
+0.464285714286
+0.51724137931
+0.5

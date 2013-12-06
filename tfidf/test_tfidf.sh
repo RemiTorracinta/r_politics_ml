@@ -32,3 +32,5 @@ do
 echo "c is " $c
 python ../SVM_rank/performance.py ./fTest.data-tf_idf ./test/predict-$c
 done
+
+python ../SVM_rank/performance.py ./fTest.data-tf_idf ./test/predict-0.0001

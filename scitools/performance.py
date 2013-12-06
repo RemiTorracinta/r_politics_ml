@@ -90,21 +90,21 @@ if len(sys.argv) == 3:
 
     print "Accuracy on top " + str(use_interval_five) + " is: " + str(len(set(top_test).intersection(set(top_predict)))/float(use_interval_five))
 
-#calculates better than random
-#for i in range(1,101):
-#       top_predict = []
-#       top_test = []
-#       for j in range(i):
-#           top_predict.append(testratings[j][1])
-#           top_test.append(predictratings[j][1])
+    #calculates better than random
+    for i in range(1,31):
+        top_predict = []
+        top_test = []
+        for j in range(i):
+            top_predict.append(testratings[j][1])
+            top_test.append(predictratings[j][1])
+        
+        acc = len(set(top_test).intersection(set(top_predict)))
+        print str(acc)
+    #       print "Better than random on top " + str(i) + " is: " + str(acc/(i/100.))
 
-#       acc = len(set(top_test).intersection(set(top_predict)))/float(i)
-#       print "Better than random on top " + str(i) + " is: " + str(acc/(i/100.))
 
 else:
     print "improper usage"
-
-
 
 
 

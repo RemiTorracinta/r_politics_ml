@@ -33,3 +33,6 @@ do
 echo "c is " $c
 python ./performance.py ../predecap\ data/fTest.data ./test/predict-$c
 done
+
+
+python ./performance.py ../predecap\ data/fTest.data ./test/predict-0.001

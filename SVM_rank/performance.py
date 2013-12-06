@@ -53,7 +53,16 @@ if len(sys.argv) == 3:
 
     print "Accuracy on top " + str(use_interval) + " is: " + str(len(set(top_test).intersection(set(top_predict)))/float(use_interval))
 
-
+    common = set(top_test).intersection(set(top_predict))
+    testorder = []
+    predictorder = []
+    for i in range(len(testratings)):
+        testorder.append(testratings[i][1])
+        predictorder.append(predictratings[i][1])
+    sum = 0
+    for i in common:
+        sum += abs(testorder.index(i) - predictorder.index(i))
+    print "Avg distance: " + str(float(sum)/use_interval)
 
 
     #rescale interval_ten to remove arbitrary cutoffs
@@ -100,15 +109,17 @@ if len(sys.argv) == 3:
     print "Accuracy on top " + str(use_interval_five) + " is: " + str(len(set(top_test).intersection(set(top_predict)))/float(use_interval_five))
 
 #calculates better than random
-#for i in range(1,101):
-#       top_predict = []
-#       top_test = []
-#       for j in range(i):
-#           top_predict.append(testratings[j][1])
-#           top_test.append(predictratings[j][1])
+for i in range(1,31):
+       top_predict = []
+       top_test = []
+       for j in range(i):
+          top_predict.append(testratings[j][1])
+          top_test.append(predictratings[j][1])
 
-#       acc = len(set(top_test).intersection(set(top_predict)))/float(i)
+       acc = len(set(top_test).intersection(set(top_predict)))
+       print str(acc)
 #       print "Better than random on top " + str(i) + " is: " + str(acc/(i/100.))
+
 
 else:
     print "improper usage"
